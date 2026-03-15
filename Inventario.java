@@ -15,8 +15,8 @@ public class Inventario {
 
                 String[] partes = linea.split("\\|");
 
-                String categoria = partes[0];
-                String producto = partes[1];
+                String categoria = partes[0].trim();
+                String producto = partes[1].trim();
 
                 mapa.putIfAbsent(categoria, new ArrayList<>());
                 mapa.get(categoria).add(producto);
